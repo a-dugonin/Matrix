@@ -1,16 +1,15 @@
-# This is a sample Python script.
+from matrix import Matrix
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+m1 = Matrix(count_rows=2, count_columns=3)
+m1.matrix = [[1, 2, 3], [4, 5, 6]]
+m2 = Matrix(count_rows=2, count_columns=3)
+m2.matrix = [[7, 8, 9], [10, 11, 12]]
+print(m1, '\n')
+print(m2, '\n')
+print(m1.add(m2), '\n')
+print(m1.subtract(m2), '\n')
+m3 = Matrix(count_rows=3, count_columns=2)
+m3.matrix = [[1, 2], [3, 4], [5, 6]]
+print(m3, '\n')
+print(m1.multiply(m3), '\n')
+print(m1.transpose())
